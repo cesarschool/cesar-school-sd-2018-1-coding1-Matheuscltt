@@ -22,7 +22,12 @@ bool isPalindrome (char sentence[], int length) {
             }
         }
     } else {
-        temp = false;
+        int half = length - 1;
+        for (int i = 0; i < half; ++i) {
+            if (sentence[i] != sentence[length - 1 - i]) {
+                temp = false;
+            }
+        }
     }
     if (temp) {
         printf("true\n");
